@@ -1,7 +1,8 @@
 const passport = require('passport');
 
 module.exports = {
-  Login function login: function(req, res){
+  //Login function
+  login: function(req, res){
     passport.authenticate('local', function(err, user, info){
       if(err || !user){
         return res.send({message: info.message, user});
@@ -16,15 +17,15 @@ module.exports = {
     })(req, res);
   },
 
-  //Logout
-  function logout: function(req, res) {
+  //Logout function 
+  logout: function(req, res) {
     req.logout();
     res.redirect('/');
   },
 
 
-  //Register
-  function register: function(req, res){
+  //Register function
+  register: function(req, res){
     //TODO: form validation here
     data =
       {
