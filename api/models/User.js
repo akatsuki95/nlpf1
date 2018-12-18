@@ -9,11 +9,22 @@ module.exports = {
 
   attributes: {
 
-    username: {
+    firstname: {
       type: 'string'
       unique: 'true'
     },
-
+    lastname: {
+      type: 'string',
+      required: true
+    },
+    email: {
+      type: 'string',
+      required: true
+    },
+    password: {
+      type: 'string',
+      required: true
+    },
     roles: {
       collection: 'Role',
       via: 'users'

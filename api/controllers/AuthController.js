@@ -28,7 +28,8 @@ module.exports = {
     //TODO: form validation here
     data =
       {
-        username: req.body.username,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
         email: req.body.email,
         password: req.body.password,
       }
